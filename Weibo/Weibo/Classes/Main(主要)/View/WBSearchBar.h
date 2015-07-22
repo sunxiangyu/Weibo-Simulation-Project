@@ -10,4 +10,6 @@
 
 @interface WBSearchBar : UITextField
 
++(instancetype)searchBar;
+
 @end

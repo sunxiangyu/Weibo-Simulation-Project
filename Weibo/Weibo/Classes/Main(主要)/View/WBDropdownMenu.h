@@ -8,6 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
+@class WBDropdownMenu;
+
+@protocol WBDropdownMenuDelegate <NSObject>
+@optional
+-(void)dropdownMenuDidDismiss:(WBDropdownMenu *)menu;
+-(void)dropdownMenuDidshow:(WBDropdownMenu *)menu;
+
+@end
+
 @interface WBDropdownMenu : UIView
+
+@property(nonatomic, strong) UIView *content;
+
+@property(nonatomic, strong) UIViewController *contentController;
+
+@property(nonatomic, weak) id<WBDropdownMenuDelegate> delegate;
+
++(instancetype)menu;
+
+-(void)showFrom:(UIView *)from;
+
+-(void)dismiss;
 
 @end

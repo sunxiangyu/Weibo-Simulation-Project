@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class WBTabBar;
+
+@protocol WBTabBarDelegate <UITabBarDelegate>
+@optional
+
+- (void)tabBarDidClickPlusButton:(WBTabBar *)tabBar;
+
+@end
+
 @interface WBTabBar : UITabBar
+
+@property(nonatomic, weak) id<WBTabBarDelegate> delegate;
 
 @end

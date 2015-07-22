@@ -25,6 +25,10 @@
 		46C565D81B59E24500CE6070 /* WBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C565D71B59E24500CE6070 /* WBNavigationController.m */; };
 		46C565DD1B59E44B00CE6070 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C565DC1B59E44B00CE6070 /* UIView+Extension.m */; };
 		46C565E01B59ECF300CE6070 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C565DF1B59ECF300CE6070 /* UIBarButtonItem+Extension.m */; };
+		46D9B68E1B5D8B1B00A54EBF /* WBSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D9B68D1B5D8B1B00A54EBF /* WBSearchBar.m */; };
+		46D9B6911B5DD64500A54EBF /* WBDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D9B6901B5DD64500A54EBF /* WBDropdownMenu.m */; };
+		46D9B6941B5DDF2C00A54EBF /* WBMenuTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D9B6931B5DDF2C00A54EBF /* WBMenuTitleViewController.m */; };
+		46D9B6971B5DE7CE00A54EBF /* WBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D9B6961B5DE7CE00A54EBF /* WBTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,14 @@
 		46C565DC1B59E44B00CE6070 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		46C565DE1B59ECF300CE6070 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		46C565DF1B59ECF300CE6070 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		46D9B68C1B5D8B1B00A54EBF /* WBSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSearchBar.h; sourceTree = "<group>"; };
+		46D9B68D1B5D8B1B00A54EBF /* WBSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSearchBar.m; sourceTree = "<group>"; };
+		46D9B68F1B5DD64500A54EBF /* WBDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBDropdownMenu.h; sourceTree = "<group>"; };
+		46D9B6901B5DD64500A54EBF /* WBDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBDropdownMenu.m; sourceTree = "<group>"; };
+		46D9B6921B5DDF2C00A54EBF /* WBMenuTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMenuTitleViewController.h; sourceTree = "<group>"; };
+		46D9B6931B5DDF2C00A54EBF /* WBMenuTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMenuTitleViewController.m; sourceTree = "<group>"; };
+		46D9B6951B5DE7CE00A54EBF /* WBTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBTabBar.h; sourceTree = "<group>"; };
+		46D9B6961B5DE7CE00A54EBF /* WBTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +236,8 @@
 		46C565A31B58C06700CE6070 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				46D9B6921B5DDF2C00A54EBF /* WBMenuTitleViewController.h */,
+				46D9B6931B5DDF2C00A54EBF /* WBMenuTitleViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +292,12 @@
 		46C565A91B58C06700CE6070 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				46D9B68C1B5D8B1B00A54EBF /* WBSearchBar.h */,
+				46D9B68D1B5D8B1B00A54EBF /* WBSearchBar.m */,
+				46D9B68F1B5DD64500A54EBF /* WBDropdownMenu.h */,
+				46D9B6901B5DD64500A54EBF /* WBDropdownMenu.m */,
+				46D9B6951B5DE7CE00A54EBF /* WBTabBar.h */,
+				46D9B6961B5DE7CE00A54EBF /* WBTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -475,15 +495,19 @@
 			files = (
 				46C565BE1B59D19600CE6070 /* WBDiscoverViewController.m in Sources */,
 				46C565D81B59E24500CE6070 /* WBNavigationController.m in Sources */,
+				46D9B6971B5DE7CE00A54EBF /* WBTabBar.m in Sources */,
 				46C565CF1B59DBE800CE6070 /* WBTest1ViewController.m in Sources */,
 				46C565781B58C05400CE6070 /* AppDelegate.m in Sources */,
 				46C565751B58C05400CE6070 /* main.m in Sources */,
+				46D9B6941B5DDF2C00A54EBF /* WBMenuTitleViewController.m in Sources */,
 				46C565BB1B59D16300CE6070 /* WBMessageCenterViewController.m in Sources */,
 				46C565DD1B59E44B00CE6070 /* UIView+Extension.m in Sources */,
 				46C565B81B59D13300CE6070 /* WBHomeViewController.m in Sources */,
+				46D9B68E1B5D8B1B00A54EBF /* WBSearchBar.m in Sources */,
 				46C565C11B59D1B500CE6070 /* WBProfileViewController.m in Sources */,
 				46C5657B1B58C05400CE6070 /* Weibo.xcdatamodeld in Sources */,
 				46C565E01B59ECF300CE6070 /* UIBarButtonItem+Extension.m in Sources */,
+				46D9B6911B5DD64500A54EBF /* WBDropdownMenu.m in Sources */,
 				46C565D41B59DC1800CE6070 /* WBTest2ViewController.m in Sources */,
 				46C565C41B59D89A00CE6070 /* WBTabBarViewController.m in Sources */,
 			);

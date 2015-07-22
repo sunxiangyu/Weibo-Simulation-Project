@@ -12,8 +12,9 @@
 #import "WBMessageCenterViewController.h"
 #import "WBProfileViewController.h"
 #import "WBNavigationController.h"
+#import "WBTabBar.h"
 
-@interface WBTabBarViewController ()
+@interface WBTabBarViewController ()<WBTabBarDelegate>
 
 @end
 
@@ -34,6 +35,11 @@
     WBProfileViewController *profile = [[WBProfileViewController alloc] init];
     [self addChildVc:profile title:@"我" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
     
+    
+    WBTabBar *tabBar = [[WBTabBar alloc] init];
+    tabBar.delegate = self;
+    [self setValue:tabBar forKeyPath:@"tabBar"];
+    
 
 }
 
@@ -52,12 +58,19 @@
     selectTextAttrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
     [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     [childVc.tabBarItem setTitleTextAttributes:selectTextAttrs forState:UIControlStateSelected];
-    childVc.view.backgroundColor = WBRandomColor;
+//    childVc.view.backgroundColor = WBRandomColor;
     
     WBNavigationController *nav = [[WBNavigationController alloc] initWithRootViewController:childVc];
     [self addChildViewController:nav];
 }
 
+#pragma mark - WBTabBarDelegate
 
+- (void)tabBarDidClickPlusButton:(WBTabBar *)tabBar
+{
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.backgroundColor = [UIColor redColor];
+    [self presentViewController:vc animated:YES completion:nil];
+}
 
 @end
