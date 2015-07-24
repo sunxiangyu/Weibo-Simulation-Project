@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "WBTabBarViewController.h"
+#import "WBNewFeatureViewController.h"
+#import "OAuthViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,8 +22,17 @@
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
     
-    WBTabBarViewController *tabbarVc = [[WBTabBarViewController alloc] init];
-    self.window.rootViewController = tabbarVc;
+    self.window.rootViewController = [[OAuthViewController alloc] init];
+//    NSString *key = @"CFBundleVersion";
+//    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+//    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[key];
+//    if ([currentVersion isEqualToString:lastVersion]) {
+//        self.window.rootViewController = [[WBTabBarViewController alloc] init];
+//    } else {
+//        self.window.rootViewController = [[WBNewFeatureViewController alloc] init];
+//        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:key];
+//        [[NSUserDefaults standardUserDefaults] synchronize];
+//    }
     
     [self.window makeKeyAndVisible];   
     return YES;
