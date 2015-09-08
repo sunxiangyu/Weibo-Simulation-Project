@@ -10,6 +10,8 @@
 #import "WBTabBarViewController.h"
 #import "WBNewFeatureViewController.h"
 #import "OAuthViewController.h"
+#import "WBAccount.h"
+#import "WBAccountTool.h"
 
 @interface AppDelegate ()
 
@@ -22,19 +24,16 @@
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
     
-    self.window.rootViewController = [[OAuthViewController alloc] init];
-//    NSString *key = @"CFBundleVersion";
-//    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
-//    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[key];
-//    if ([currentVersion isEqualToString:lastVersion]) {
-//        self.window.rootViewController = [[WBTabBarViewController alloc] init];
-//    } else {
-//        self.window.rootViewController = [[WBNewFeatureViewController alloc] init];
-//        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:key];
-//        [[NSUserDefaults standardUserDefaults] synchronize];
-//    }
+    WBAccount *account = [WBAccountTool account];
     
-    [self.window makeKeyAndVisible];   
+    if (account) {
+        [self.window switchRootViewController];
+    } else {
+        self.window.rootViewController = [[OAuthViewController alloc] init];
+    }
+    
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

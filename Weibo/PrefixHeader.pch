@@ -13,6 +13,11 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 #import "UIBarButtonItem+Extension.h"
 #import "UIView+Extension.h"
+#import "UIWindow+Extension.h"
+#import "NSDate+Extension.h"
+#import "NSString+Extension.h"
+#import "NSString+Emoji.h"
+#import "UITextView+Extension.h"
 
 #ifdef DEBUG
 #define WBLog(...) NSLog(__VA_ARGS__)
@@ -25,5 +30,10 @@
 
 // 随机色
 #define WBRandomColor WBColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+#define WBEmotionDidSelectNotification @"HWEmotionDidSelectNotification"
+#define WBSelectEmotionKey @"HWSelectEmotionKey"
+
+#define WBEmotionDidDeleteNotification @"HWEmotionDidDeleteNotification"
 
 #endif
